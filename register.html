@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Sistem Login Aman Firebase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+        </div>
+        <h1>Buat Akun Baru</h1>
+        <p class="subtitle">Bergabung dan mulai perjalanan Anda</p>
+      </div>
+
+      <form id="registerForm" class="auth-form">
+        <div class="input-group">
+          <label for="registerName">Nama Lengkap</label>
+          <input 
+            type="text" 
+            id="registerName" 
+            placeholder="nama"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerEmail">Email</label>
+          <input 
+            type="email" 
+            id="registerEmail" 
+            placeholder="nama@email.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerPassword">Password</label>
+          <input 
+            type="password" 
+            id="registerPassword" 
+            placeholder="Minimal 8 karakter"
+            required
+            autocomplete="new-password"
+          />
+          <small class="input-hint">Gunakan minimal 8 karakter</small>
+        </div>
+
+        <div class="input-group">
+          <label for="registerConfirmPassword">Konfirmasi Password</label>
+          <input 
+            type="password" 
+            id="registerConfirmPassword" 
+            placeholder="Ketik ulang password"
+            required
+            autocomplete="new-password"
+          />
+        </div>
+
+        <button type="submit" id="registerBtn" class="btn btn-accent">
+          <span class="btn-text">Daftar Sekarang</span>
+          <span class="btn-loader"></span>
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>atau</span>
+      </div>
+
+      <p class="link-text">
+        Sudah punya akun? 
+        <a href="index.html" class="link-highlight">Masuk di sini</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  
+  <!-- Toast Container akan dibuat otomatis oleh JavaScript -->
+</body>
+</html>
