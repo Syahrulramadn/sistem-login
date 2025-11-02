@@ -1,3 +1,3 @@
-1. Langkah-langkah Instalasi Sistem Login Aman[langkah_instalasi_sistem.txt](./langkah_instalasi_sistem.txt)
+1. Langkah-langkah Instalasi Sistem Login Aman [langkah_instalasi_sistem.txt](./langkah_instalasi_sistem.txt)
 2. Dokumentasi lengkap tampilan sistem terdapat pada file [dokumentasi-tampilan.pdf](./dokumentasi-tampilan.pdf)
 3. URL Sistem Login Aman : https://project-cloud-3f733.web.app/index.html
