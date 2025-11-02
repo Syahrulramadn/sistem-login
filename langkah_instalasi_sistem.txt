@@ -1,0 +1,59 @@
+LANGKAH-LANGKAH INSTALASI SISTEM
+--------------------------------
+
+Judul: Desain dan Implementasi Sistem Login Aman Menggunakan Firebase Authentication dan Firestore
+
+1. Clone repositori dari GitHub:
+   git clone https://github.com/Syahrulramadn/sistem-login.git
+
+2. Masuk ke folder proyek:
+   cd sistem-login
+
+3. Buka proyek di code editor (misalnya Visual Studio Code).
+
+4. Buka situs https://console.firebase.google.com/ untuk membuat project baru di Firebase.
+
+5. Klik “Add Project” dan beri nama misalnya: sistem-login.
+
+6. Aktifkan fitur Authentication, pilih metode Email/Password.
+
+7. Aktifkan Cloud Firestore dan buat database baru dalam mode Production.
+
+8. Klik ikon </> (Add App) untuk menambahkan aplikasi web.
+
+9. Salin konfigurasi Firebase dan tempelkan ke bagian atas file script.js, misalnya:
+   const firebaseConfig = {
+     apiKey: "YOUR_API_KEY",
+     authDomain: "YOUR_AUTH_DOMAIN",
+     projectId: "YOUR_PROJECT_ID",
+     storageBucket: "YOUR_STORAGE_BUCKET",
+     messagingSenderId: "YOUR_SENDER_ID",
+     appId: "YOUR_APP_ID"
+   };
+
+10. Masuk ke menu Firestore Database → Rules, ubah aturan menjadi:
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write: if request.auth != null;
+        }
+      }
+    }
+    Klik Publish untuk menyimpan.
+
+11. Aktifkan verifikasi email di menu Authentication → Templates → Email Verification.
+
+12. Jalankan aplikasi secara lokal dengan membuka file index.html di browser.
+
+13. Lakukan registrasi, verifikasi email, dan login untuk menguji sistem.
+
+14. Jika ingin di-deploy ke cloud:
+    firebase login
+    firebase init
+    firebase deploy
+
+15. Setelah berhasil, sistem dapat diakses melalui URL Firebase Hosting.
+
+--------------------------------
+Selesai. Sistem login Firebase siap dijalankan secara lokal maupun di cloud.
